@@ -1,0 +1,18 @@
+[package]
+name = "bls_no_std"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+signature_bls = { version = "0.35.0" , default-features = false }
+externc-libm = { git = "https://github.com/HaruxOS/externc-libm" }
+libc = "0.2.134"
+data-encoding = {default-features = false, features = ["alloc"]}
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
