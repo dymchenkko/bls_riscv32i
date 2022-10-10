@@ -1,8 +1,6 @@
-#![feature(asm)]
 #![no_std]
 #![no_main]
 #![feature(default_alloc_error_handler)]
-pub extern crate externc_libm as libm;
 use signature_bls::{Signature, PublicKey};
 extern crate alloc;
 use alloc::alloc::{GlobalAlloc, Layout};

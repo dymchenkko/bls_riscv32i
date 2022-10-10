@@ -7,13 +7,9 @@ edition = "2021"
 
 [dependencies]
 signature_bls = { version = "0.35.0" , default-features = false }
-externc-libm = { git = "https://github.com/HaruxOS/externc-libm" }
-libc = "0.2.134"
 data-encoding = {default-features = false, features = ["alloc"]}
-riscv-rt = "0.9.0"
+riscv-rt = { git = "https://github.com/rust-embedded/riscv-rt/", branch = "master" }
 panic-halt = "0.2.0"
 
 [profile.release]
-codegen-units = 1
 debug = true 
-lto = true  
