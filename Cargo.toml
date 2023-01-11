@@ -16,3 +16,6 @@ panic = "abort"
 
 [profile.release]
 panic = "abort"
+lto = "yes"
+codegen-units = 1
+opt-level = "z"
